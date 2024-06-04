@@ -9,10 +9,10 @@ export const buildPlugins = (
 ): webpack.WebpackPluginInstance[] => {
   return [
     new HtmlWebpackPlugin({
-      template: options.paths.template,
+      template: options.paths.template
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-    }),
+      filename: 'css/[name].[contenthash:8].css'
+    })
   ];
 };

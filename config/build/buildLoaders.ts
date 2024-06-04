@@ -17,17 +17,17 @@ export const buildLoaders = (options: IBuildOptions): webpack.RuleSetRule[] => {
             auto: /.module./,
             localIdentName: options.isDev
               ? '[path][name]__[local]--[hash:base64:8]'
-              : '[hash:base64:8]',
-          },
-        },
-      },
-    ],
+              : '[hash:base64:8]'
+          }
+        }
+      }
+    ]
   };
 
   const tsLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
-    exclude: /node_modules/,
+    exclude: /node_modules/
   };
 
   return [tsLoader, cssLoader];

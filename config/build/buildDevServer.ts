@@ -8,6 +8,6 @@ export const buildDevServer = (
 ): DevServerConfiguration => {
   return {
     port: options.port,
-    historyApiFallback: true,
+    historyApiFallback: true
   };
 };

@@ -9,6 +9,6 @@ export const buildResolve = (
     extensions: ['.tsx', '.ts', '.js'],
     mainFiles: ['index'],
     modules: [options.paths.src, 'node_modules'],
-    preferAbsolute: true,
+    preferAbsolute: true
   };
 };
