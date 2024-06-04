@@ -7,7 +7,7 @@ webpack;
 
 export const buildLoaders = (options: IBuildOptions): webpack.RuleSetRule[] => {
   const cssLoader = {
-    test: [/\.css$/i, /\.module.css$/],
+    test: [/\.(sc|sa|c)ss$/i, /\.module.css$/],
     use: [
       options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
@@ -20,7 +20,8 @@ export const buildLoaders = (options: IBuildOptions): webpack.RuleSetRule[] => {
               : '[hash:base64:8]'
           }
         }
-      }
+      },
+      'sass-loader'
     ]
   };
 
